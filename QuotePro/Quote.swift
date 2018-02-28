@@ -16,7 +16,10 @@ class Quote
   
   init(quote: String, source: String)
   {
-    self.quote = quote
+    self.quote = "\"\(quote)\""
     self.source = source
+    
+    // TODO: Remove this temporary method call
+    self.photo = Photo()
   }
 }

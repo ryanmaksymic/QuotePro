@@ -16,6 +16,7 @@
 		FE87CBAB2047053F00988EEE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBAA2047053F00988EEE /* Photo.swift */; };
 		FE87CBAD2047054700988EEE /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBAC2047054700988EEE /* Quote.swift */; };
 		FE87CBAF20470C4A00988EEE /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBAE20470C4A00988EEE /* QuotesTableViewController.swift */; };
+		FE87CBB12047121800988EEE /* QuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBB02047121800988EEE /* QuotesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FE87CBAA2047053F00988EEE /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FE87CBAC2047054700988EEE /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		FE87CBAE20470C4A00988EEE /* QuotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
+		FE87CBB02047121800988EEE /* QuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				FE87CB952047044200988EEE /* AppDelegate.swift */,
 				FE87CBAA2047053F00988EEE /* Photo.swift */,
 				FE87CBAC2047054700988EEE /* Quote.swift */,
+				FE87CBB02047121800988EEE /* QuotesTableViewCell.swift */,
 				FE87CB972047044200988EEE /* QuoteBuilderViewController.swift */,
 				FE87CBAE20470C4A00988EEE /* QuotesTableViewController.swift */,
 				FE87CB992047044200988EEE /* Main.storyboard */,
@@ -152,6 +155,7 @@
 				FE87CB982047044200988EEE /* QuoteBuilderViewController.swift in Sources */,
 				FE87CBAF20470C4A00988EEE /* QuotesTableViewController.swift in Sources */,
 				FE87CB962047044200988EEE /* AppDelegate.swift in Sources */,
+				FE87CBB12047121800988EEE /* QuotesTableViewCell.swift in Sources */,
 				FE87CBAD2047054700988EEE /* Quote.swift in Sources */,
 				FE87CB9E2047044200988EEE /* QuotePro.xcdatamodeld in Sources */,
 			);

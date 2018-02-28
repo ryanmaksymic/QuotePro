@@ -16,4 +16,10 @@ class Photo
   {
     self.image = image
   }
+  
+  // TODO: Remove this temporary method
+  init()
+  {
+    self.image = UIImage(named: "defaultPhoto")!
+  }
 }

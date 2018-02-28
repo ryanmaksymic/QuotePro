@@ -16,6 +16,8 @@ class QuotesTableViewController: UITableViewController
   {
     super.viewDidLoad()
     
+    loadSampleQuotes()
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem
   }
@@ -36,14 +38,20 @@ class QuotesTableViewController: UITableViewController
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
   {
-    return 20
     return quotes.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath)
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as? QuotesTableViewCell else
+    {
+      fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+    }
     
-    // Configure the cell...
+    let quote = quotes[indexPath.row]
+    
+    cell.quoteLabel.text = quote.quote
+    cell.sourceLabel.text = quote.source
+    cell.quoteImageView.image = quote.photo?.image
     
     return cell
   }
