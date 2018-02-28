@@ -26,12 +26,39 @@ class QuoteBuilderViewController: UIViewController
   
   var delegate: QuoteBuilderDelegate?
   
+  var forismaticAPI = ForismaticAPI()
+  
   
   // MARK: -
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    
+    setRandomQuote()
+  }
+  
+  
+  // MARK: - Private methods
+  
+  func setRandomQuote()
+  {
+    forismaticAPI.getRandomQuote { (quote) in
+      
+      OperationQueue.main.addOperation {
+        
+        if quote != nil
+        {
+          let quoteText = quote!.0.trimmingCharacters(in: .whitespacesAndNewlines)
+          var source = quote!.1.trimmingCharacters(in: .whitespacesAndNewlines)
+          
+          if source == "" { source = "Anonymous" }
+          
+          self.quoteView.quoteLabel.text = quoteText
+          self.quoteView.sourceLabel.text = "– \(source)"
+        }
+      }
+    }
   }
   
   
@@ -39,7 +66,7 @@ class QuoteBuilderViewController: UIViewController
   
   @IBAction func randomQuote(_ sender: UIButton)
   {
-    // TODO: API call
+    setRandomQuote()
   }
   
   @IBAction func randomPhoto(_ sender: UIButton)
