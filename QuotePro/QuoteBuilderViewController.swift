@@ -32,10 +32,6 @@ class QuoteBuilderViewController: UIViewController
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
-    quoteView.quoteLabel.text = "Sup dude!"
-    quoteView.sourceLabel.text = "- Ryan M."
-    quoteView.quoteImageView.image = UIImage(named: "defaultPhoto")!
   }
   
   
@@ -53,11 +49,10 @@ class QuoteBuilderViewController: UIViewController
   
   @IBAction func save(_ sender: UIBarButtonItem)
   {
-    //let quote = Quote(quote: quoteLabel.text!, source: sourceLabel.text!)
+    let quote = Quote(quote: quoteView.quoteLabel.text!, source: quoteView.sourceLabel.text!)
+    // TODO: Add photo to Quote object; reformat initializer?
     
-    // TODO: Save photo
-    
-    //delegate?.quoteBuilder(quoteBuilder: self, didCreateQuote: quote)
+    delegate?.quoteBuilder(quoteBuilder: self, didCreateQuote: quote)
     
     self.navigationController?.popViewController(animated: true)
   }

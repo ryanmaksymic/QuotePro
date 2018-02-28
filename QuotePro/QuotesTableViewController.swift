@@ -69,7 +69,7 @@ class QuotesTableViewController: UITableViewController, QuoteBuilderDelegate
    // Return false if you do not want the specified item to be editable.
    return true
    }
-
+   
    // Override to support editing the table view.
    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
    if editingStyle == .delete {
@@ -86,10 +86,18 @@ class QuotesTableViewController: UITableViewController, QuoteBuilderDelegate
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
   {
-    print("Row \(indexPath.row) tapped!")
+    let quote = quotes[indexPath.row]
     
-    // TODO: Generate composited image
-    let quoteImage = UIImage(named: "defaultPhoto")!
+    let exportView = QuoteView()
+    exportView.frame.size = CGSize(width: 375, height: 375)
+    exportView.quoteLabel.text = quote.quote
+    exportView.sourceLabel.text = quote.source
+    exportView.quoteImageView.image = quote.photo?.image
+    
+    UIGraphicsBeginImageContextWithOptions(exportView.bounds.size, true, 0)
+    exportView.drawHierarchy(in: exportView.bounds, afterScreenUpdates: true)
+    let quoteImage = UIGraphicsGetImageFromCurrentImageContext()!
+    UIGraphicsEndImageContext()
     
     let share = UIActivityViewController(activityItems: [quoteImage], applicationActivities:nil)
     
