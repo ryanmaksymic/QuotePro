@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol QuoteBuilderDelegate
+{
+  func quoteBuilder(quoteBuilder: QuoteBuilderViewController, didCreateQuote quote: Quote)
+}
+
 class QuoteBuilderViewController: UIViewController
 {
   // MARK: - Properties
@@ -15,6 +20,8 @@ class QuoteBuilderViewController: UIViewController
   @IBOutlet weak var quoteLabel: UILabel!
   @IBOutlet weak var sourceLabel: UILabel!
   @IBOutlet weak var quoteImageView: UIImageView!
+  
+  var delegate: QuoteBuilderDelegate?
   
   
   override func viewDidLoad()
@@ -36,7 +43,11 @@ class QuoteBuilderViewController: UIViewController
   
   @IBAction func save(_ sender: UIBarButtonItem)
   {
-    // TODO: Create Quote object
+    let quote = Quote(quote: quoteLabel.text!, source: sourceLabel.text!)
+    
+    delegate?.quoteBuilder(quoteBuilder: self, didCreateQuote: quote)
+    
+    self.navigationController?.popViewController(animated: true)
   }
   
 }

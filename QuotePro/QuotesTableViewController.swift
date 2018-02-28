@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuotesTableViewController: UITableViewController
+class QuotesTableViewController: UITableViewController, QuoteBuilderDelegate
 {
   var quotes = [Quote]()
   
@@ -56,6 +56,18 @@ class QuotesTableViewController: UITableViewController
     return cell
   }
   
+  
+  // MARK: - QuoteBuilderDelegate
+  
+  func quoteBuilder(quoteBuilder: QuoteBuilderViewController, didCreateQuote quote: Quote)
+  {
+    print("Quote created!")
+    
+    quotes.append(quote)
+    
+    self.tableView.reloadData()
+  }
+  
   /*
    // Override to support conditional editing of the table view.
    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -78,6 +90,14 @@ class QuotesTableViewController: UITableViewController
   
   
   // MARK: - Navigation
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  {
+    if let destinationVC = segue.destination as? QuoteBuilderViewController
+    {
+      destinationVC.delegate = self
+    }
+  }
   
   /*
    // In a storyboard-based application, you will often want to do a little preparation before navigation
