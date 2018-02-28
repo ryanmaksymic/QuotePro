@@ -13,6 +13,8 @@
 		FE87CB9E2047044200988EEE /* QuotePro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE87CB9C2047044200988EEE /* QuotePro.xcdatamodeld */; };
 		FE87CBA02047044200988EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE87CB9F2047044200988EEE /* Assets.xcassets */; };
 		FE87CBA32047044200988EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE87CBA12047044200988EEE /* LaunchScreen.storyboard */; };
+		FE87CBAB2047053F00988EEE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBAA2047053F00988EEE /* Photo.swift */; };
+		FE87CBAD2047054700988EEE /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBAC2047054700988EEE /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FE87CB9F2047044200988EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE87CBA22047044200988EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE87CBA42047044200988EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE87CBAA2047053F00988EEE /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FE87CBAC2047054700988EEE /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				FE87CB952047044200988EEE /* AppDelegate.swift */,
+				FE87CBAA2047053F00988EEE /* Photo.swift */,
+				FE87CBAC2047054700988EEE /* Quote.swift */,
 				FE87CB972047044200988EEE /* ViewController.swift */,
 				FE87CB992047044200988EEE /* Main.storyboard */,
 				FE87CB9F2047044200988EEE /* Assets.xcassets */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE87CBAB2047053F00988EEE /* Photo.swift in Sources */,
 				FE87CB982047044200988EEE /* ViewController.swift in Sources */,
 				FE87CB962047044200988EEE /* AppDelegate.swift in Sources */,
+				FE87CBAD2047054700988EEE /* Quote.swift in Sources */,
 				FE87CB9E2047044200988EEE /* QuotePro.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
