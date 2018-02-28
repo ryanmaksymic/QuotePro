@@ -8,26 +8,36 @@
 
 import UIKit
 
+// MARK: - Protocol
+
 protocol QuoteBuilderDelegate
 {
   func quoteBuilder(quoteBuilder: QuoteBuilderViewController, didCreateQuote quote: Quote)
 }
 
+
+// MARK: - Class
+
 class QuoteBuilderViewController: UIViewController
 {
   // MARK: - Properties
   
-  @IBOutlet weak var quoteLabel: UILabel!
-  @IBOutlet weak var sourceLabel: UILabel!
-  @IBOutlet weak var quoteImageView: UIImageView!
+  @IBOutlet weak var quoteView: QuoteView!
   
   var delegate: QuoteBuilderDelegate?
   
   
+  // MARK: -
+  
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    
+    quoteView.quoteLabel.text = "Sup dude!"
+    quoteView.sourceLabel.text = "- Ryan M."
+    quoteView.quoteImageView.image = UIImage(named: "defaultPhoto")!
   }
+  
   
   // MARK: - Actions
   
@@ -43,12 +53,12 @@ class QuoteBuilderViewController: UIViewController
   
   @IBAction func save(_ sender: UIBarButtonItem)
   {
-    let quote = Quote(quote: quoteLabel.text!, source: sourceLabel.text!)
+    //let quote = Quote(quote: quoteLabel.text!, source: sourceLabel.text!)
     
-    delegate?.quoteBuilder(quoteBuilder: self, didCreateQuote: quote)
+    // TODO: Save photo
+    
+    //delegate?.quoteBuilder(quoteBuilder: self, didCreateQuote: quote)
     
     self.navigationController?.popViewController(animated: true)
   }
-  
 }
-

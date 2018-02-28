@@ -10,17 +10,24 @@ import UIKit
 
 class QuotesTableViewController: UITableViewController, QuoteBuilderDelegate
 {
+  // MARK: - Properties
+  
   var quotes = [Quote]()
+  
+  
+  // MARK: -
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
     
-    loadSampleQuotes()
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    loadSampleQuotes()
   }
+  
+  
+  // MARK: - Private methods
   
   func loadSampleQuotes()
   {
@@ -56,27 +63,13 @@ class QuotesTableViewController: UITableViewController, QuoteBuilderDelegate
     return cell
   }
   
-  
-  // MARK: - QuoteBuilderDelegate
-  
-  func quoteBuilder(quoteBuilder: QuoteBuilderViewController, didCreateQuote quote: Quote)
-  {
-    print("Quote created!")
-    
-    quotes.append(quote)
-    
-    self.tableView.reloadData()
-  }
-  
   /*
    // Override to support conditional editing of the table view.
    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
    // Return false if you do not want the specified item to be editable.
    return true
    }
-   */
-  
-  /*
+
    // Override to support editing the table view.
    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
    if editingStyle == .delete {
@@ -89,6 +82,21 @@ class QuotesTableViewController: UITableViewController, QuoteBuilderDelegate
    */
   
   
+  // MARK: - UITableViewDelegate
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+  {
+    print("Row \(indexPath.row) tapped!")
+    
+    // TODO: Generate composited image
+    let quoteImage = UIImage(named: "defaultPhoto")!
+    
+    let share = UIActivityViewController(activityItems: [quoteImage], applicationActivities:nil)
+    
+    self.present(share, animated: true, completion: nil)
+  }
+  
+  
   // MARK: - Navigation
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -99,11 +107,13 @@ class QuotesTableViewController: UITableViewController, QuoteBuilderDelegate
     }
   }
   
-  /*
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  
+  // MARK: - QuoteBuilderDelegate
+  
+  func quoteBuilder(quoteBuilder: QuoteBuilderViewController, didCreateQuote quote: Quote)
+  {
+    quotes.append(quote)
+    
+    self.tableView.reloadData()
+  }
 }

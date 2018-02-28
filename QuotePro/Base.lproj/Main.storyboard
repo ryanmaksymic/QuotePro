@@ -94,40 +94,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yMN-rd-Ods">
                                 <rect key="frame" x="0.0" y="64" width="375" height="467"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="375" translatesAutoresizingMaskIntoConstraints="NO" id="orS-hT-aul">
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="375" translatesAutoresizingMaskIntoConstraints="NO" id="orS-hT-aul" customClass="QuoteView" customModule="QuotePro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="urv-8Z-B26">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="urv-8Z-B26" secondAttribute="height" multiplier="1:1" id="KQc-vO-wJY"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-92-9MW">
-                                                <rect key="frame" x="8" y="20" width="359" height="95.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVT-Sv-Nez">
-                                                <rect key="frame" x="8" y="334.5" width="359" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="cGp-92-9MW" secondAttribute="trailing" constant="8" id="381-5b-dXe"/>
                                             <constraint firstAttribute="width" secondItem="orS-hT-aul" secondAttribute="height" multiplier="1:1" id="Jl6-zg-aFS"/>
-                                            <constraint firstItem="urv-8Z-B26" firstAttribute="top" secondItem="orS-hT-aul" secondAttribute="top" id="NWG-mS-3sA"/>
-                                            <constraint firstItem="NVT-Sv-Nez" firstAttribute="leading" secondItem="orS-hT-aul" secondAttribute="leading" constant="8" id="ZvG-Tk-AVP"/>
-                                            <constraint firstAttribute="trailing" secondItem="urv-8Z-B26" secondAttribute="trailing" id="cyE-e0-Sxq"/>
-                                            <constraint firstAttribute="trailing" secondItem="NVT-Sv-Nez" secondAttribute="trailing" constant="8" id="lQ8-Ju-Xyj"/>
-                                            <constraint firstItem="cGp-92-9MW" firstAttribute="leading" secondItem="orS-hT-aul" secondAttribute="leading" constant="8" id="oPp-fb-B8L"/>
-                                            <constraint firstItem="urv-8Z-B26" firstAttribute="leading" secondItem="orS-hT-aul" secondAttribute="leading" id="ww8-01-cU0"/>
-                                            <constraint firstItem="cGp-92-9MW" firstAttribute="top" secondItem="orS-hT-aul" secondAttribute="top" constant="20" id="yEh-8D-bu3"/>
-                                            <constraint firstAttribute="bottom" secondItem="NVT-Sv-Nez" secondAttribute="bottom" constant="20" id="zYg-52-Apc"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c0-WB-X5i">
@@ -163,9 +134,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="quoteImageView" destination="urv-8Z-B26" id="Zbe-yd-z0K"/>
-                        <outlet property="quoteLabel" destination="cGp-92-9MW" id="BsQ-w5-JIq"/>
-                        <outlet property="sourceLabel" destination="NVT-Sv-Nez" id="JgU-Og-eal"/>
+                        <outlet property="quoteView" destination="orS-hT-aul" id="DFD-xh-Rw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
