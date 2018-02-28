@@ -12,14 +12,12 @@ class Quote
 {
   var quote: String
   var source: String
-  var photo: Photo?
+  var photo: Photo
   
-  init(quote: String, source: String)
+  init(quote: String, source: String, photo: Photo)
   {
     self.quote = quote
     self.source = source
-    
-    // TODO: Remove this temporary method call
-    self.photo = Photo()
+    self.photo = photo
   }
 }

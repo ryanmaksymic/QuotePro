@@ -17,7 +17,14 @@ class ForismaticAPI
     
     request(to: url) { (data, error) in
       
-      completionHandler(self.string(fromJSON: data))
+      if error == nil
+      {
+        completionHandler(self.string(fromJSON: data))
+      }
+      else
+      {
+        completionHandler(nil)
+      }
     }
   }
   

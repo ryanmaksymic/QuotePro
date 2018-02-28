@@ -20,6 +20,7 @@
 		FE87CBB32047237200988EEE /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBB22047237200988EEE /* QuoteView.swift */; };
 		FE87CBB52047239700988EEE /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE87CBB42047239700988EEE /* QuoteView.xib */; };
 		FE87CBB72047541400988EEE /* ForismaticAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBB62047541400988EEE /* ForismaticAPI.swift */; };
+		FE87CBB9204764DC00988EEE /* LorempixelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CBB8204764DC00988EEE /* LorempixelAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FE87CBB22047237200988EEE /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		FE87CBB42047239700988EEE /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
 		FE87CBB62047541400988EEE /* ForismaticAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForismaticAPI.swift; sourceTree = "<group>"; };
+		FE87CBB8204764DC00988EEE /* LorempixelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LorempixelAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				FE87CB952047044200988EEE /* AppDelegate.swift */,
 				FE87CBAA2047053F00988EEE /* Photo.swift */,
 				FE87CBAC2047054700988EEE /* Quote.swift */,
+				FE87CBB8204764DC00988EEE /* LorempixelAPI.swift */,
 				FE87CBB62047541400988EEE /* ForismaticAPI.swift */,
 				FE87CBB22047237200988EEE /* QuoteView.swift */,
 				FE87CBB42047239700988EEE /* QuoteView.xib */,
@@ -168,6 +171,7 @@
 				FE87CBB72047541400988EEE /* ForismaticAPI.swift in Sources */,
 				FE87CB962047044200988EEE /* AppDelegate.swift in Sources */,
 				FE87CBB12047121800988EEE /* QuotesTableViewCell.swift in Sources */,
+				FE87CBB9204764DC00988EEE /* LorempixelAPI.swift in Sources */,
 				FE87CBAD2047054700988EEE /* Quote.swift in Sources */,
 				FE87CB9E2047044200988EEE /* QuotePro.xcdatamodeld in Sources */,
 			);

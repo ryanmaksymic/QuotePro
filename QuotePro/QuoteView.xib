@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kefa.ttf">
+            <string>Kefa-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuoteView" customModule="QuotePro" customModuleProvider="target">
             <connections>
@@ -26,31 +31,40 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="rQW-mR-mdK">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                 </imageView>
+                <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3g-SM-K7A">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMC-jp-zdI">
-                    <rect key="frame" x="16" y="16" width="343" height="95.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <rect key="frame" x="16" y="118" width="343" height="139"/>
+                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-yM-Ldw">
-                    <rect key="frame" x="16" y="338" width="343" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="16" y="265" width="343" height="20"/>
+                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="UMC-jp-zdI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1mz-dC-KzD"/>
-                <constraint firstItem="UMC-jp-zdI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="2rF-tv-5ez"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UMC-jp-zdI" secondAttribute="trailing" constant="16" id="3dh-2z-ilK"/>
-                <constraint firstItem="cPo-yM-Ldw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="6nA-xs-R8R"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cPo-yM-Ldw" secondAttribute="bottom" constant="16" id="HOp-zJ-X3q"/>
+                <constraint firstItem="e3g-SM-K7A" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="AiV-Zb-kut"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UMC-jp-zdI" secondAttribute="trailing" constant="16" id="Esa-gz-AWq"/>
+                <constraint firstItem="e3g-SM-K7A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HOk-Sa-1AC"/>
+                <constraint firstItem="e3g-SM-K7A" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Hry-Cy-gV1"/>
+                <constraint firstItem="cPo-yM-Ldw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Oev-9G-xI1"/>
                 <constraint firstItem="rQW-mR-mdK" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Ooe-ue-Qxa"/>
+                <constraint firstItem="e3g-SM-K7A" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="PdZ-fC-HUA"/>
+                <constraint firstItem="UMC-jp-zdI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Qvu-i7-BOH"/>
                 <constraint firstItem="rQW-mR-mdK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YJS-sN-w7X"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cPo-yM-Ldw" secondAttribute="trailing" constant="16" id="cRk-gm-XCB"/>
                 <constraint firstItem="rQW-mR-mdK" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dND-Qr-7Xs"/>
                 <constraint firstItem="rQW-mR-mdK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eDS-aO-wCh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cPo-yM-Ldw" secondAttribute="trailing" constant="16" id="iBL-ru-zLB"/>
+                <constraint firstItem="UMC-jp-zdI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hkF-ZS-grT"/>
+                <constraint firstItem="UMC-jp-zdI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="j0L-6f-zt3"/>
+                <constraint firstItem="cPo-yM-Ldw" firstAttribute="top" secondItem="UMC-jp-zdI" secondAttribute="bottom" constant="8" id="mvE-ZL-1wS"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
