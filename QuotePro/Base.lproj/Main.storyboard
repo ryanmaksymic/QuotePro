@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,18 +15,49 @@
         <!--My Quotes-->
         <scene sceneID="DE5-ku-h68">
             <objects>
-                <tableViewController id="RXt-5G-xL3" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Jd-Df-NB7">
+                <tableViewController id="RXt-5G-xL3" customClass="QuotesTableViewController" customModule="QuotePro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Jd-Df-NB7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Gkh-30-fSu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" rowHeight="100" id="Gkh-30-fSu">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gkh-30-fSu" id="vrP-9x-ilT">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="xTf-KF-PRo">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="xTf-KF-PRo" secondAttribute="height" multiplier="1:1" id="TcW-kg-AAB"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02l-8O-HZu">
+                                            <rect key="frame" x="108" y="71" width="251" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmw-iG-2gq">
+                                            <rect key="frame" x="108" y="11" width="251" height="54"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xTf-KF-PRo" secondAttribute="bottom" id="3uW-6d-9P0"/>
+                                        <constraint firstItem="02l-8O-HZu" firstAttribute="trailing" secondItem="vrP-9x-ilT" secondAttribute="trailingMargin" id="Ef1-4D-rAl"/>
+                                        <constraint firstItem="xTf-KF-PRo" firstAttribute="top" secondItem="vrP-9x-ilT" secondAttribute="top" id="Ffz-uE-1C2"/>
+                                        <constraint firstItem="vmw-iG-2gq" firstAttribute="trailing" secondItem="vrP-9x-ilT" secondAttribute="trailingMargin" id="GkC-Cd-Kq4"/>
+                                        <constraint firstItem="02l-8O-HZu" firstAttribute="bottom" secondItem="vrP-9x-ilT" secondAttribute="bottomMargin" id="OpD-bQ-UVG"/>
+                                        <constraint firstItem="vmw-iG-2gq" firstAttribute="top" secondItem="vrP-9x-ilT" secondAttribute="topMargin" id="VJM-Dz-ZfP"/>
+                                        <constraint firstItem="vmw-iG-2gq" firstAttribute="leading" secondItem="xTf-KF-PRo" secondAttribute="trailing" constant="8" id="hW5-nr-sX4"/>
+                                        <constraint firstItem="xTf-KF-PRo" firstAttribute="leading" secondItem="vrP-9x-ilT" secondAttribute="leading" id="nwh-ue-keW"/>
+                                        <constraint firstItem="02l-8O-HZu" firstAttribute="leading" secondItem="xTf-KF-PRo" secondAttribute="trailing" constant="8" id="xmV-KL-Aff"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -119,7 +151,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Quote" id="KVa-Ur-Kah">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xRi-vn-tG7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xRi-vn-tG7">
+                            <connections>
+                                <action selector="save:" destination="BYZ-38-t0r" id="lxN-es-nMS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="quoteImageView" destination="urv-8Z-B26" id="Zbe-yd-z0K"/>

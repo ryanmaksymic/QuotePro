@@ -23,14 +23,21 @@ class QuoteBuilderViewController: UIViewController
   }
   
   // MARK: - Actions
+  
   @IBAction func randomQuote(_ sender: UIButton)
   {
-    
+    // TODO: API call
   }
   
   @IBAction func randomPhoto(_ sender: UIButton)
   {
-    
+    // TODO: API call
   }
+  
+  @IBAction func save(_ sender: UIBarButtonItem)
+  {
+    // TODO: Create Quote object
+  }
+  
 }
 
