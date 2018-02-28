@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE87CB962047044200988EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CB952047044200988EEE /* AppDelegate.swift */; };
-		FE87CB982047044200988EEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CB972047044200988EEE /* ViewController.swift */; };
+		FE87CB982047044200988EEE /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87CB972047044200988EEE /* QuoteBuilderViewController.swift */; };
 		FE87CB9B2047044200988EEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE87CB992047044200988EEE /* Main.storyboard */; };
 		FE87CB9E2047044200988EEE /* QuotePro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE87CB9C2047044200988EEE /* QuotePro.xcdatamodeld */; };
 		FE87CBA02047044200988EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE87CB9F2047044200988EEE /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		FE87CB922047044200988EEE /* QuotePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE87CB952047044200988EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE87CB972047044200988EEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE87CB972047044200988EEE /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
 		FE87CB9A2047044200988EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE87CB9D2047044200988EEE /* QuotePro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuotePro.xcdatamodel; sourceTree = "<group>"; };
 		FE87CB9F2047044200988EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 				FE87CB952047044200988EEE /* AppDelegate.swift */,
 				FE87CBAA2047053F00988EEE /* Photo.swift */,
 				FE87CBAC2047054700988EEE /* Quote.swift */,
-				FE87CB972047044200988EEE /* ViewController.swift */,
+				FE87CB972047044200988EEE /* QuoteBuilderViewController.swift */,
 				FE87CB992047044200988EEE /* Main.storyboard */,
 				FE87CB9F2047044200988EEE /* Assets.xcassets */,
 				FE87CBA12047044200988EEE /* LaunchScreen.storyboard */,
@@ -146,7 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE87CBAB2047053F00988EEE /* Photo.swift in Sources */,
-				FE87CB982047044200988EEE /* ViewController.swift in Sources */,
+				FE87CB982047044200988EEE /* QuoteBuilderViewController.swift in Sources */,
 				FE87CB962047044200988EEE /* AppDelegate.swift in Sources */,
 				FE87CBAD2047054700988EEE /* Quote.swift in Sources */,
 				FE87CB9E2047044200988EEE /* QuotePro.xcdatamodeld in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QuoteBuilderViewController.swift
 //  QuotePro
 //
 //  Created by Ryan Maksymic on 2018-02-28.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuoteBuilderViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
