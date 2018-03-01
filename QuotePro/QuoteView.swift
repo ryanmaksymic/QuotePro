@@ -37,11 +37,4 @@ class QuoteView: UIView
     contentView.frame = self.bounds
     contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
   }
-  
-  func updateView(withQuote quote: String, source: String, image: UIImage)
-  {
-//    quoteLabel.text = quote
-//    sourceLabel.text = source
-//    quoteImageView.image = image
-  }
 }

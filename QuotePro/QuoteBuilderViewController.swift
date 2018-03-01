@@ -23,6 +23,7 @@ class QuoteBuilderViewController: UIViewController
   // MARK: - Properties
   
   @IBOutlet weak var quoteView: QuoteView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   var delegate: QuoteBuilderDelegate?
   
@@ -45,6 +46,9 @@ class QuoteBuilderViewController: UIViewController
   
   func setRandomQuote()
   {
+    activityIndicator.startAnimating()
+    activityIndicator.isHidden = false
+    
     forismaticAPI.getRandomQuote { (quote) in
       
       OperationQueue.main.addOperation {
@@ -59,12 +63,17 @@ class QuoteBuilderViewController: UIViewController
           self.quoteView.quoteLabel.text = "\"\(quoteText)\""
           self.quoteView.sourceLabel.text = "– \(source)"
         }
+        
+        self.activityIndicator.stopAnimating()
       }
     }
   }
   
   func setRandomImage()
   {
+    activityIndicator.startAnimating()
+    activityIndicator.isHidden = false
+    
     lorempixelAPI.getRandomImage { (image) in
       
       OperationQueue.main.addOperation {
@@ -74,6 +83,7 @@ class QuoteBuilderViewController: UIViewController
           self.quoteView.quoteImageView.image = image
         }
         
+        self.activityIndicator.stopAnimating()
       }
       
     }

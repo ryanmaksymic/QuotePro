@@ -10,6 +10,7 @@ import UIKit
 
 class LorempixelAPI
 {
+  // Generates a random image using the Lorempixel API:
   func getRandomImage(completionHandler: @escaping (UIImage?) -> Void)
   {
     let url = "http://lorempixel.com/375/375/"
